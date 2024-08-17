@@ -7711,8 +7711,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               this.dataService.addIndicatorAndReference(dataObject).subscribe(function () {
                 if (_this4.superAdmin) {
                   window.alert("Indicator ".concat(indicator.Title, " has been saved.."));
-                  // this.restForms();
-                  location.reload();
+                  //this.restForms();
+                  // location.reload();
+                  _this4.router.navigate(['/']);
                 } else {
                   _this4.dialog.open(_this4.normalUserSaveDialog);
                 }
@@ -10197,9 +10198,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, DataService);
         this.http = http;
         //uri = 'https://programmingzen.org/openlair';
-        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'https://backend.openlair.edutec.science/openlair'; 
         //uri = 'http://localhost:3001/openlair';
-        this.uri = 'https://backendv2.openlair.edutec.science/openlair'; //local
+        this.uri = 'https://backendv2.openlair.edutec.science/openlair'; //live
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
       }

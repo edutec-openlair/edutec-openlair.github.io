@@ -7616,8 +7616,9 @@ let AddDataComponent = class AddDataComponent {
                 this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
                     if (this.superAdmin) {
                         window.alert(`Indicator ${indicator.Title} has been saved..`);
-                        // this.restForms();
-                        location.reload();
+                        //this.restForms();
+                        // location.reload();
+                        this.router.navigate(['/']);
                     }
                     else {
                         this.dialog.open(this.normalUserSaveDialog);
@@ -9680,9 +9681,9 @@ let DataService = class DataService {
     constructor(http) {
         this.http = http;
         //uri = 'https://programmingzen.org/openlair';
-        //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+        //uri = 'https://backend.openlair.edutec.science/openlair'; 
         //uri = 'http://localhost:3001/openlair';
-        this.uri = 'https://backendv2.openlair.edutec.science/openlair'; //local
+        this.uri = 'https://backendv2.openlair.edutec.science/openlair'; //live
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
     }
