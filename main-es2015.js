@@ -7803,10 +7803,10 @@ let AddDataComponent = class AddDataComponent {
             const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
             headers.append('Content-Type', 'multipart/form-data');
             headers.append('Accept', 'application/json');
-            //https://backendapi.openlair.edutec.science
+            //http://localhost:3000
             let options = { headers: headers };
             this.loadingFile = true;
-            this.http.post("http://localhost:3000", formData, options = options)
+            this.http.post("https://backendapi.openlair.edutec.science", formData, options = options)
                 .subscribe((res) => {
                 this.resetFileData();
                 console.log("Got something back");

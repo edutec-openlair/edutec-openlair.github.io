@@ -7939,12 +7939,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]();
             headers.append('Content-Type', 'multipart/form-data');
             headers.append('Accept', 'application/json');
-            //https://backendapi.openlair.edutec.science
+            //http://localhost:3000
             var options = {
               headers: headers
             };
             this.loadingFile = true;
-            this.http.post("http://localhost:3000", formData, options = options).subscribe(function (res) {
+            this.http.post("https://backendapi.openlair.edutec.science", formData, options = options).subscribe(function (res) {
               _this7.resetFileData();
               console.log("Got something back");
               var rawData = Object.values(res)[0][0];
